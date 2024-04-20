@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Andy C Ernst Portfolio</title>
+  <title>Andy Ernst - UX Engineer</title>
 
   <!-- jotform stuff -->
   <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?v=3.3.53284" type="text/javascript"></script>
@@ -34,29 +34,18 @@
 
     setTimeout(function () {
       JotForm.paymentExtrasOnTheFly([null, null, null, { "description": "", "name": "name", "qid": "3", "subLabel": "", "text": "Name", "type": "control_textbox" }, { "description": "", "name": "email", "qid": "4", "subLabel": "", "text": "E-mail", "type": "control_textbox" }, null, { "description": "", "mde": "No", "name": "message", "qid": "6", "subLabel": "", "text": "Message", "type": "control_textarea", "wysiwyg": "Disable" }, { "name": "submit", "qid": "7", "text": "Submit", "type": "control_button" }, { "name": "clickTo", "qid": "8", "text": "Say Hello", "type": "control_head" }]);
-    }, 20); 
+    }, 20);
+    JotForm.ownerView = true;
+    JotForm.isNewSACL = true;
+    window.brandingFooter = { init: () => { } } // mock the branding footer func to avoid console error
   </script>
   <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/stylebuilder/static/form-common.css?v=d01b17d" />
   <link type="text/css" rel="stylesheet" href="form.css" />
   <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/defaultV2.css?v=d01b17d" />
   <link type="text/css" rel="stylesheet"
     href="https://cdn01.jotfor.ms/themes/CSS/5495488a700cc478508b4567.css?v=3.3.53284&themeRevisionID=65ca29b26430371446a81082" />
-  <!-- <link type="text/css" rel="stylesheet"
-     href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.53284" />
-   <link type="text/css" rel="stylesheet"
-     href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.53284" /> -->
-  <!-- <script>
-     JotForm.showJotFormPowered = "new_footer";
-   </script>
-   <script>
-     JotForm.poweredByText = "Powered by Jotform";
-   </script> -->
-
   <link id=color-scheme-style href="https://cdn01.jotfor.ms/stylebuilder/static/color-scheme.css?v=3.3.53284"
     type="text/css" rel="stylesheet" />
-  <script type="text/javascript">
-    JotForm.ownerView = true;
-    JotForm.isNewSACL = true;</script>
   <!-- end jot form stuff -->
 
   <link rel="stylesheet" href="./style.css">
@@ -67,12 +56,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
     rel="stylesheet">
-
 </head>
 
 <body>
   <nav>
-    <div class="nav-container">
+    <div class="nav-container body-width">
       <a href="#home">
         <img src="website fox logo.png" alt="" class="home-img" />
       </a>
@@ -90,86 +78,103 @@
     </div>
   </nav>
   <main role="main">
-    <section>
-      <div class="hero-text">
+    <section class="-section">
+      <div class="hero-text body-width">
         <h1 id="home">Initial commit of my websites</h1>
         <img src="me.png" class="self-image"
           alt="Andy Ernst smiling. A 30-something white man with glasses, hair pulled back into a ponytail" />
       </div>
     </section>
 
-    <section>
-      <h2 id="what-i-do">What I do</h2>
+    <section class="what-i-do-section">
+      <div class="body-width">
+        <h2 id="what-i-do">What I do</h2>
+      </div>
     </section>
 
-    <section>
-      <h2 id="my-work">My Work</h2>
+    <section class="my-work-section">
+      <div class="body-width">
+
+        <h2 id="my-work">My Work</h2>
+      </div>
     </section>
 
-    <section>
-      <h2 id="contact">Contact</h2>
 
-      <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();"
-        action="https://submit.jotform.com/submit/241088118653155" method="post" name="form_241088118653155"
-        id="241088118653155" accept-charset="utf-8" autocomplete="on">
-        <input type="hidden" name="formID" value="241088118653155" />
-        <input type="hidden" id="JWTContainer" value="" />
-        <input type="hidden" id="cardinalOrderNumber" value="" />
-        <input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1713583533411" />
-        <input type="hidden" id="submitSource" name="submitSource" value="unknown" />
-        <input type="hidden" id="buildDate" name="buildDate" value="1713583533411" />
-        <div role="main" class="form-all">
-          <ul class="form-section page-section">
-            <li id="cid_8" class="form-input-wide" data-type="control_head">
-              <div class="form-header-group  header-large">
-                <div class="header-text httac htvam">
-                  <h2 id="header_8" class="form-header" data-component="header">Say Hello</h1>
+    <section class="contact-section">
+      <div class="body-width">
+
+        <h2 id="contact">Contact</h2>
+
+        <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();"
+          action="https://submit.jotform.com/submit/241088118653155" method="post" name="form_241088118653155"
+          id="241088118653155" accept-charset="utf-8" autocomplete="on">
+          <input type="hidden" name="formID" value="241088118653155" />
+          <input type="hidden" id="JWTContainer" value="" />
+          <input type="hidden" id="cardinalOrderNumber" value="" />
+          <input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1713583533411" />
+          <input type="hidden" id="submitSource" name="submitSource" value="unknown" />
+          <input type="hidden" id="buildDate" name="buildDate" value="1713583533411" />
+          <div role="main" class="form-all">
+            <ul class="form-section page-section">
+              <li id="cid_8" class="form-input-wide" data-type="control_head">
+                <div class="form-header-group  header-large">
+                  <div class="header-text httac htvam">
+                    <h2 id="header_8" class="form-header" data-component="header">Say Hello</h1>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="form-line jf-required" data-type="control_textbox" id="id_3"><label
-                class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false">
-                Name<span class="form-required">*</span> </label>
-              <div id="cid_3" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_3"
-                  name="q3_name" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue=""
-                  style="width:310px" size="310" placeholder=" " data-component="textbox" aria-labelledby="label_3"
-                  required="" value="" /> </div>
-            </li>
-            <li class="form-line jf-required" data-type="control_textbox" id="id_4"><label
-                class="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false">
-                E-mail<span class="form-required">*</span> </label>
-              <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_4"
-                  name="q4_email" data-type="input-textbox" class="form-textbox validate[required, Email]"
-                  data-defaultvalue="" style="width:310px" size="310" placeholder=" " data-component="textbox"
-                  aria-labelledby="label_4" required="" value="" /> </div>
-            </li>
-            <li class="form-line jf-required" data-type="control_textarea" id="id_6"><label
-                class="form-label form-label-top form-label-auto" id="label_6" for="input_6" aria-hidden="false">
-                Message<span class="form-required">*</span> </label>
-              <div id="cid_6" class="form-input-wide jf-required" data-layout="full"> <textarea id="input_6"
-                  class="form-textarea validate[required]" name="q6_message" style="width:648px;height:163px"
-                  data-component="textarea" required="" aria-labelledby="label_6"></textarea> </div>
-            </li>
-            <li class="form-line" data-type="control_button" id="id_7">
-              <div id="cid_7" class="form-input-wide" data-layout="full">
-                <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-                  <button id="input_7" type="submit"
-                    class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button"
-                    data-content="">Submit</button>
+              </li>
+              <li class="form-line jf-required" data-type="control_textbox" id="id_3"><label
+                  class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false">
+                  Name<span class="form-required">*</span> </label>
+                <div id="cid_3" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_3"
+                    name="q3_name" data-type="input-textbox" class="form-textbox validate[required]"
+                    data-defaultvalue="" style="width:310px" size="310" placeholder=" " data-component="textbox"
+                    aria-labelledby="label_3" required="" value="" /> </div>
+              </li>
+              <li class="form-line jf-required" data-type="control_textbox" id="id_4"><label
+                  class="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false">
+                  E-mail<span class="form-required">*</span> </label>
+                <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_4"
+                    name="q4_email" data-type="input-textbox" class="form-textbox validate[required, Email]"
+                    data-defaultvalue="" style="width:310px" size="310" placeholder=" " data-component="textbox"
+                    aria-labelledby="label_4" required="" value="" /> </div>
+              </li>
+              <li class="form-line jf-required" data-type="control_textarea" id="id_6"><label
+                  class="form-label form-label-top form-label-auto" id="label_6" for="input_6" aria-hidden="false">
+                  Message<span class="form-required">*</span> </label>
+                <div id="cid_6" class="form-input-wide jf-required" data-layout="full"> <textarea id="input_6"
+                    class="form-textarea validate[required]" name="q6_message" style="width:648px;height:163px"
+                    data-component="textarea" required="" aria-labelledby="label_6"></textarea> </div>
+              </li>
+              <li class="form-line" data-type="control_button" id="id_7">
+                <div id="cid_7" class="form-input-wide" data-layout="full">
+                  <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+                    <button id="input_7" type="submit"
+                      class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
+                      data-component="button" data-content="">Submit</button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
-          </ul>
-        </div>
-        <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="241088118653155" />
-        <script type="text/javascript">
-          var all_spc = document.querySelectorAll("form[id='241088118653155'] .simple_spc");
-          for (var i = 0; i < all_spc.length; i++) {
-            all_spc[i].value = "241088118653155-241088118653155";
-          }
-        </script>
-      </form>
+              </li>
+              <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+            </ul>
+          </div>
+          <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="241088118653155" />
+          <script type="text/javascript">
+            var all_spc = document.querySelectorAll("form[id='241088118653155'] .simple_spc");
+            for (var i = 0; i < all_spc.length; i++) {
+              all_spc[i].value = "241088118653155-241088118653155";
+            }
+          </script>
+        </form>
+      </div>
+
+    </section>
+
+
+    <section class="testimonial-section">
+      <div class="body-width">
+        <h2 id="testimonial">Testimonial</h2>
+      </div>
     </section>
   </main>
   <footer>
@@ -185,12 +190,6 @@
       </div>
     </div>
   </footer>
-  <!-- <script>
-    var sheet = new CSSStyleSheet
-    sheet.replaceSync( `.branding21 { display: none }`)
-    var shadow = document.querySelector('.jotform-form > input[name="timeToSubmit"] + div')
-    shadow.shadowRoot.adoptedStyleSheets.push(sheet)
-  </script> -->
 </body>
 
 </html>

@@ -19,6 +19,8 @@
   --heading-font: 'DM Serif Display', serif;
 }
 
+/*#region base*/
+
 html {
   font-size: 62.5%;
   font-family: var(--body-font);
@@ -31,6 +33,10 @@ body {
   font-size: 1.8rem;
   margin: 0;
   background-color: var(--primary2);
+}
+
+main {
+  width: 100%;
 }
 
 h1,
@@ -77,9 +83,19 @@ a {
   text-decoration: none;
 }
 
-.nav-container {
+
+/*#endregion base*/
+
+/*#region layout helper*/
+.body-width {
   max-width: var(--body-width);
   margin: auto;
+}
+
+/*#endregion layout helper*/
+
+/*#region nav*/
+.nav-container {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
@@ -108,10 +124,13 @@ a {
   max-width: 10rem;
   margin-right: auto;
 }
+/*#endregion nav*/
 
-main {
-  margin: auto;
-  width: 100%;
+
+/*#region hero*/
+.hero-section {
+  /* temp */
+  background-color: #1D89AE; 
 }
 
 .hero-text {
@@ -130,9 +149,32 @@ main {
   flex-basis: 100px;
   height: fit-content;
 }
+/*#endregion hero*/
 
+/*#region what*/
+.what-i-do-section {
+
+}
+/*#endregion what*/
+
+/*#region my work*/
+.my-work-section {
+
+}
+/*#endregion my work*/
+
+/*#region contact*/
+.contact-section {}
+/*#endregion contact*/
+
+/*#region testimonial*/
+.testimonial-section {}
+/*#endregion testimonial*/
+
+
+/*#region footer*/
 footer {
-  background-color: black;
+  background-color: var(--gray900);
   padding: 4rem 1rem;
 }
 
@@ -165,3 +207,4 @@ footer {
   gap: 1rem;
   color: white;
 }
+/*#endregion footer*/
