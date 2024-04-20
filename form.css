@@ -427,3 +427,8 @@ div.form-header-group.hasImage {
 .form-line-active {
   background-color: #505b77;
 }
+
+/* remove stupid promo stuff */
+.jotform-form > input[name="timeToSubmit"] + div {
+  display: none !important;
+}

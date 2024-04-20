@@ -5,11 +5,23 @@
   --h3-size: 3.2rem;
   --h4-size: 2.4rem;
   --h5-size: 1.8rem;
+  --primary1: #9ADD9C;
+  --primary2: #64A365;
+  --primary3: #446D45;
+  --secondary1: #9BD8F2;
+  --secondary2: #34BAE4;
+  --secondary3: #1E87B4;
+  --accent1: #FFE279;
+  --accent2: #F0C425;
+  --accent3: #D1A700;
+  --gray900: #171916;
+  --body-font: 'Montserrat', sans-serif;
+  --heading-font: 'DM Serif Display', serif;
 }
 
 html {
   font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--body-font);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -18,6 +30,7 @@ html {
 body {
   font-size: 1.8rem;
   margin: 0;
+  background-color: var(--primary2);
 }
 
 h1,
@@ -30,7 +43,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: 'DM Serif Display', serif;
+  font-family: var(--heading-font);
   font-weight: 400;
   font-style: normal;
 }
@@ -69,6 +82,8 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .nav-list {
@@ -86,6 +101,7 @@ a {
 
 .nav-list > li > a {
   color: white;
+  font-family: var(--heading-font);
 }
 
 .home-img {
@@ -94,8 +110,25 @@ a {
 }
 
 main {
-  max-width: var(--body-width);
   margin: auto;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+}
+
+#home {
+  min-width: 50%;
+}
+
+.self-image {
+  border: 5px solid;
+  border-radius: 50%;
+  flex-shrink: 1;
+  min-width: 50%;
+  flex-basis: 100px;
+  height: fit-content;
 }
 
 footer {

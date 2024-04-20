@@ -6,19 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Andy C Ernst Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./favicon/favicon.ico" sizes="48x48">
-  <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
-    rel="stylesheet">
+
   <!-- jotform stuff -->
   <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?v=3.3.53284" type="text/javascript"></script>
   <script src="https://cdn02.jotfor.ms/static/jotform.forms.js?v=3.3.53284" type="text/javascript"></script>
-  <script src="https://cdn01.jotfor.ms/s/umd/19fcf3898c6/for-form-branding-footer.js?v=3.3.53284" type="text/javascript"
-    defer></script>
   <script src="https://cdn03.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.53284" type="text/javascript"></script>
   <script src="https://cdn01.jotfor.ms/js/errorNavigation.js?v=3.3.53284" type="text/javascript"></script>
   <script type="text/javascript">
@@ -51,15 +42,15 @@
   <link type="text/css" rel="stylesheet"
     href="https://cdn01.jotfor.ms/themes/CSS/5495488a700cc478508b4567.css?v=3.3.53284&themeRevisionID=65ca29b26430371446a81082" />
   <!-- <link type="text/css" rel="stylesheet"
-    href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.53284" />
-  <link type="text/css" rel="stylesheet"
-    href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.53284" /> -->
+     href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.53284" />
+   <link type="text/css" rel="stylesheet"
+     href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.53284" /> -->
   <!-- <script>
-    JotForm.showJotFormPowered = "new_footer";
-  </script>
-  <script>
-    JotForm.poweredByText = "Powered by Jotform";
-  </script> -->
+     JotForm.showJotFormPowered = "new_footer";
+   </script>
+   <script>
+     JotForm.poweredByText = "Powered by Jotform";
+   </script> -->
 
   <link id=color-scheme-style href="https://cdn01.jotfor.ms/stylebuilder/static/color-scheme.css?v=3.3.53284"
     type="text/css" rel="stylesheet" />
@@ -67,6 +58,16 @@
     JotForm.ownerView = true;
     JotForm.isNewSACL = true;</script>
   <!-- end jot form stuff -->
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
@@ -88,9 +89,13 @@
       </ul>
     </div>
   </nav>
-  <main>
+  <main role="main">
     <section>
-      <h1 id="home">Initial commit of my websites</h1>
+      <div class="hero-text">
+        <h1 id="home">Initial commit of my websites</h1>
+        <img src="me.png" class="self-image"
+          alt="Andy Ernst smiling. A 30-something white man with glasses, hair pulled back into a ponytail" />
+      </div>
     </section>
 
     <section>
@@ -180,6 +185,12 @@
       </div>
     </div>
   </footer>
+  <!-- <script>
+    var sheet = new CSSStyleSheet
+    sheet.replaceSync( `.branding21 { display: none }`)
+    var shadow = document.querySelector('.jotform-form > input[name="timeToSubmit"] + div')
+    shadow.shadowRoot.adoptedStyleSheets.push(sheet)
+  </script> -->
 </body>
 
 </html>
