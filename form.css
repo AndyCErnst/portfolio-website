@@ -21,6 +21,15 @@
   }
 }
 
+.form-section {
+  list-style: none;
+}
+
+.form-label {
+  margin-bottom: 16px;
+  margin-right: 0;
+}
+
 /* 2 - FORM WIDTH */
 .form-all {
   max-width: 600px;
@@ -39,6 +48,7 @@
 .form-captcha input,
 .form-spinner input {
   background-color: #e3e3e3;
+  max-width: 100%;
 }
 
 /* 10 - LINE SPACING */
@@ -50,14 +60,6 @@
 .supernova .form-all,
 .form-all {
   background-color: #60626c;
-}
-
-.supernova {
-  background-color: #12121c;
-}
-
-.supernova body {
-  background-color: transparent;
 }
 
 .form-all,
@@ -83,36 +85,31 @@ span.FITB-inptCont[data-type='radiobox'] label,
 /* 17 - INPUT WIDTHS */
 /*  20 - FORM PADDING */
 ul.form-section {
-  padding: 0px 38px;
+  padding: 3rem;
+  margin: 0;
 }
 
-.form-textbox:not(#productSearch-input),
-.form-textarea,
-li[data-type='control_fileupload'] .qq-upload-button,
-.signature-wrapper {
-  border-color: #000000;
+.form-textbox,
+.form-textarea {
+  border-color: #ffffff00;
+  border-width: 2px;
 }
 
 .form-textarea:hover,
-.form-textbox:hover,
-li[data-type='control_fileupload'] .qq-upload-button:hover,
-.signature-wrapper:hover {
-  border-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+.form-textbox:hover {
+  border-color:var(--accent3);
 }
 
 .form-textarea:focus,
-.form-textbox:focus,
-li[data-type='control_fileupload'] .qq-upload-button:focus,
-.signature-wrapper:focus {
-  border-color: #000000;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+.form-textbox:focus {
+  border-color: var(--accent3);
 }
 
 /* Heights */
 .form-label {
-  margin-bottom: 16px;
+  margin-bottom: 1.5rem;
   margin-right: 0;
+  display: block;
 }
 
 /* 11 - LINE PADDING */
@@ -184,14 +181,10 @@ li[data-type='control_fileupload'] .qq-upload-button:focus,
 .form-checkbox:focus + span:before,
 .form-radio:focus + label:before,
 .form-radio:focus + span:before {
-  border-color: #894200;
-  box-shadow: 0 0 0 3px rgba(137, 66, 0, 0.25);
+  border-color: var(--accent3);
 }
 
 .submit-button {
-  font-size: 16px;
-  font-weight: normal;
-  font-family: inherit;
   border: none;
   border-width: 0px;
   border-style: solid;
@@ -202,48 +195,13 @@ li[data-type='control_fileupload'] .qq-upload-button:focus,
 }
 
 li[data-type='control_button'] .form-submit-button {
-  color: #ffffff;
-  background-color: #c96100;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
+  color: #000;
+  background-color: var(--accent2);
+  padding: 2rem 0;
 }
 
 li[data-type='control_button'] .form-submit-button:hover {
-  background-color: #633000;
-}
-
-li[data-type='control_button'] button.jf-form-buttons.form-sacl-button,
-li[data-type='control_button'] button.jf-form-buttons.form-submit-print {
-  color: #c96100;
-  border-color: #c96100;
-  background-image: none;
-  background-color: #fff;
-}
-
-li[data-type='control_button'] button.jf-form-buttons.form-sacl-button:hover,
-li[data-type='control_button'] button.jf-form-buttons.form-submit-print:hover {
-  background-color: #633000;
-  color: #fff;
-}
-
-li[data-type='control_button'] button.jf-form-buttons.form-pagebreak-back {
-  background-image: none;
-  background-color: #633000;
-  box-shadow: none;
-  text-shadow: none;
-}
-
-li[data-type='control_button'] button.jf-form-buttons.form-pagebreak-back:hover {
-  background-color: #301700;
-  color: #fff;
-}
-
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+  background-color: var(--accent3);
 }
 
 .form-all .form-pagebreak-back,
@@ -262,23 +220,6 @@ li[data-type='control_image'] img {
   border-color: false !important;
 }
 
-.supernova {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: auto;
-  background-size: cover;
-}
-
-.supernova {
-  background-image: none;
-}
-
-#stage {
-  background-image: none;
-}
-
 /* | */
 .form-all {
   background-repeat: no-repeat;
@@ -292,78 +233,6 @@ li[data-type='control_image'] img {
   background-attachment: scroll;
   background-position: center top;
 }
-/* 
-    .header-large h1.form-header {
-      font-size: 2em;
-    }
-
-    .header-large h2.form-header {
-      font-size: 1.5em;
-    }
-
-    .header-large h3.form-header {
-      font-size: 1.17em;
-    }
-
-    .header-large h1+.form-subHeader {
-      font-size: 1em;
-    }
-
-    .header-large h2+.form-subHeader {
-      font-size: .875em;
-    }
-
-    .header-large h3+.form-subHeader {
-      font-size: .75em;
-    }
-
-    .header-default h1.form-header {
-      font-size: 2em;
-    }
-
-    .header-default h2.form-header {
-      font-size: 1.5em;
-    }
-
-    .header-default h3.form-header {
-      font-size: 1.17em;
-    }
-
-    .header-default h1+.form-subHeader {
-      font-size: 1em;
-    }
-
-    .header-default h2+.form-subHeader {
-      font-size: .875em;
-    }
-
-    .header-default h3+.form-subHeader {
-      font-size: .75em;
-    }
-
-    .header-small h1.form-header {
-      font-size: 2em;
-    }
-
-    .header-small h2.form-header {
-      font-size: 1.5em;
-    }
-
-    .header-small h3.form-header {
-      font-size: 1.17em;
-    }
-
-    .header-small h1+.form-subHeader {
-      font-size: 1em;
-    }
-
-    .header-small h2+.form-subHeader {
-      font-size: .875em;
-    }
-
-    .header-small h3+.form-subHeader {
-      font-size: .75em;
-    } */
 
 .form-header-group {
   text-align: left;
@@ -384,17 +253,6 @@ div.form-header-group.hasImage {
   color: #ffffff;
 }
 
-.form-collapse-table {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.2);
-  color: #ff913e;
-}
-
-.form-collapse-table .form-collapse-mid {
-  text-shadow: none;
-}
-
 .form-line-error {
   transition-property: none;
   transition-duration: 0.3s;
@@ -406,10 +264,23 @@ div.form-header-group.hasImage {
   background-color: #f23a3c;
   clear: both;
   float: none;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-top: .5rem;
+  font-size: 1.4rem;
+  vertical-align: middle;
 }
 
 .form-line-error .form-error-message .form-error-arrow {
   border-bottom-color: #f23a3c;
+}
+
+.form-error-message > img {
+  height: 1.2rem;
+  =: 1rem;
 }
 
 .form-line-error input:not(#coupon-input),
@@ -417,6 +288,7 @@ div.form-header-group.hasImage {
 .form-line-error .form-validation-error {
   border: 1px solid #f23a3c;
   box-shadow: 0 0 3px #f23a3c;
+  display: block;
 }
 
 .form-header-group .form-header,
@@ -429,6 +301,19 @@ div.form-header-group.hasImage {
 }
 
 /* remove stupid promo stuff */
-.jotform-form > input[name="timeToSubmit"] + div {
+.jotform-form > input[name='timeToSubmit'] + div {
   display: none !important;
+}
+
+.error-navigation-container {
+  display: none;
+}
+
+.jotform-form {display: flex;justify-content: center;}
+
+.form-buttons-wrapper {
+  text-align: center;
+  border-top: 1px solid;
+  margin-top: 3rem;
+  padding-top: 3rem;
 }

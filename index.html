@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Andy Ernst - UX Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
+    rel="stylesheet">
 
   <!-- jotform stuff -->
   <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?v=3.3.53284" type="text/javascript"></script>
@@ -40,22 +44,19 @@
     window.brandingFooter = { init: () => { } } // mock the branding footer func to avoid console error
   </script>
   <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/stylebuilder/static/form-common.css?v=d01b17d" />
-  <link type="text/css" rel="stylesheet" href="form.css" />
-  <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/defaultV2.css?v=d01b17d" />
-  <link type="text/css" rel="stylesheet"
-    href="https://cdn01.jotfor.ms/themes/CSS/5495488a700cc478508b4567.css?v=3.3.53284&themeRevisionID=65ca29b26430371446a81082" />
-  <link id=color-scheme-style href="https://cdn01.jotfor.ms/stylebuilder/static/color-scheme.css?v=3.3.53284"
+  <!-- <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/defaultV2.css?v=d01b17d" /> -->
+  <!-- <link type="text/css" rel="stylesheet"
+    href="https://cdn01.jotfor.ms/themes/CSS/5495488a700cc478508b4567.css?v=3.3.53284&themeRevisionID=65ca29b26430371446a81082" /> -->
+    <link id=color-scheme-style href="https://cdn01.jotfor.ms/stylebuilder/static/color-scheme.css?v=3.3.53284"
     type="text/css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="form.css" />
   <!-- end jot form stuff -->
 
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon">
   <link rel="icon" href="./favicon/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
-    rel="stylesheet">
+
 </head>
 
 <body>
@@ -78,24 +79,30 @@
     </div>
   </nav>
   <main role="main">
-    <section class="-section">
+    <section class="hero-section">
       <div class="hero-text body-width">
-        <h1 id="home">Initial commit of my websites</h1>
+        <h1 id="home">Hi,I’m Andy <div class="h3 hero-text__sub">I’m a web developer, designer, and educator</div></h1>
+        <div class="self-image-container">
         <img src="me.png" class="self-image"
           alt="Andy Ernst smiling. A 30-something white man with glasses, hair pulled back into a ponytail" />
+        </div>
       </div>
     </section>
 
     <section class="what-i-do-section">
       <div class="body-width">
-        <h2 id="what-i-do">What I do</h2>
+        <h2 id="what-i-do" class="section-heading">
+          <div class="section-heading-text">What I do</div>
+        </h2>
       </div>
     </section>
 
     <section class="my-work-section">
       <div class="body-width">
 
-        <h2 id="my-work">My Work</h2>
+        <h2 id="my-work" class="section-heading">
+          <div class="section-heading-text">My Work</div>
+        </h2>
       </div>
     </section>
 
@@ -103,7 +110,9 @@
     <section class="contact-section">
       <div class="body-width">
 
-        <h2 id="contact">Contact</h2>
+        <h2 id="contact" class="section-heading">
+          <div class="section-heading-text">Say Hello</div>
+        </h2>
 
         <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();"
           action="https://submit.jotform.com/submit/241088118653155" method="post" name="form_241088118653155"
@@ -114,15 +123,8 @@
           <input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1713583533411" />
           <input type="hidden" id="submitSource" name="submitSource" value="unknown" />
           <input type="hidden" id="buildDate" name="buildDate" value="1713583533411" />
-          <div role="main" class="form-all">
+          <div class="form-all">
             <ul class="form-section page-section">
-              <li id="cid_8" class="form-input-wide" data-type="control_head">
-                <div class="form-header-group  header-large">
-                  <div class="header-text httac htvam">
-                    <h2 id="header_8" class="form-header" data-component="header">Say Hello</h1>
-                  </div>
-                </div>
-              </li>
               <li class="form-line jf-required" data-type="control_textbox" id="id_3"><label
                   class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false">
                   Name<span class="form-required">*</span> </label>
@@ -146,7 +148,7 @@
                     class="form-textarea validate[required]" name="q6_message" style="width:648px;height:163px"
                     data-component="textarea" required="" aria-labelledby="label_6"></textarea> </div>
               </li>
-              <li class="form-line" data-type="control_button" id="id_7">
+              <li data-type="control_button" id="id_7">
                 <div id="cid_7" class="form-input-wide" data-layout="full">
                   <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
                     <button id="input_7" type="submit"
@@ -158,13 +160,7 @@
               <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
             </ul>
           </div>
-          <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="241088118653155" />
-          <script type="text/javascript">
-            var all_spc = document.querySelectorAll("form[id='241088118653155'] .simple_spc");
-            for (var i = 0; i < all_spc.length; i++) {
-              all_spc[i].value = "241088118653155-241088118653155";
-            }
-          </script>
+          <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="241088118653155-241088118653155" />
         </form>
       </div>
 
@@ -173,7 +169,9 @@
 
     <section class="testimonial-section">
       <div class="body-width">
-        <h2 id="testimonial">Testimonial</h2>
+        <h2 id="testimonial" class="section-heading">
+          <div class="section-heading-text">Testimonial</div>
+        </h2>
       </div>
     </section>
   </main>
