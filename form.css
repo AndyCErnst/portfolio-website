@@ -184,26 +184,6 @@ ul.form-section {
   border-color: var(--accent3);
 }
 
-.submit-button {
-  border: none;
-  border-width: 0px;
-  border-style: solid;
-}
-
-.submit-button {
-  min-width: 200px;
-}
-
-li[data-type='control_button'] .form-submit-button {
-  color: #000;
-  background-color: var(--accent2);
-  padding: 2rem 0;
-}
-
-li[data-type='control_button'] .form-submit-button:hover {
-  background-color: var(--accent3);
-}
-
 .form-all .form-pagebreak-back,
 .form-all .form-pagebreak-next {
   min-width: 128px;
@@ -316,4 +296,12 @@ div.form-header-group.hasImage {
   border-top: 1px solid;
   margin-top: 3rem;
   padding-top: 3rem;
+}
+
+.submit-button {
+  background-color: var(--accent2);
+  padding: 2rem 0;
+}
+.submit-button:hover {
+  background-color: var(--accent3);
 }

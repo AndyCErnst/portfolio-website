@@ -18,6 +18,7 @@
   --gray900: #171916;
   --body-font: 'Montserrat', sans-serif;
   --heading-font: 'DM Serif Display', serif;
+  --body-color: var(--primary2);
 }
 /*#region base*/
 * {
@@ -35,7 +36,7 @@ body {
   font-size: 1.8rem;
   margin: 0;
   font-family: var(--body-font);
-  background-color: var(--primary2);
+  background-color: var(--body-color);
 }
 
 main {
@@ -108,6 +109,15 @@ button {
   min-width: 200px;
   font-family: var(--body-font);
   font-size: inherit;
+  cursor: pointer;
+  border: none;
+  color: #000;
+  background-color: var(--accent2);
+  padding: 2rem 0;
+  box-shadow: 2px 2px 2px 0px #00000059;
+}
+button:hover {
+  background-color: var(--accent3);
 }
 /*#endregion base*/
 
@@ -212,6 +222,39 @@ nav {
 
 /*#region what*/
 .what-i-do-section {
+}
+
+.short-intro {
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  padding: 6rem 9rem;
+}
+
+.what-i-do-cards {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 16rem;
+  gap: 3rem;
+}
+.what-i-do-card {
+  background-color: white;
+  position: relative;
+  padding: 3rem;
+  flex-basis: 33.3333%;
+  padding-top: 6rem;
+}
+
+.what-i-do-card__img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2rem solid var(--body-color);
+  background-color: var(--primary1);
+  padding: 1rem;
 }
 /*#endregion what*/
 
