@@ -58,6 +58,7 @@ h5,
   font-family: var(--heading-font);
   font-weight: 400;
   font-style: normal;
+  margin-top: 0;
 }
 
 h1,
@@ -128,6 +129,9 @@ button:hover {
   padding: 0 16px;
 }
 
+.section {
+  padding-top: 5rem;
+}
 .section-heading {
   margin-left: auto;
   margin-right: auto;
@@ -193,8 +197,61 @@ nav {
 /*#region hero*/
 .hero-section {
   padding-top: 100px; /* to allow for the nav*/
-  background: linear-gradient(#1d89ae, #fbd37b);
   padding-bottom: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.hero__bg {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+/* base color */
+.hero-section__bg0 {
+  background: rgb(29, 137, 174);
+}
+/* horizon sunrise fade */
+.hero-section__bg1 {
+  background: linear-gradient(#1d89ae 0%, #1d89ae 20%, #fbd37b 70%);
+  opacity: 0.9;
+}
+
+/* sun */
+.hero-section__bg2 {
+  background: radial-gradient(
+    circle,
+    rgba(251, 211, 123, 1) 0%,
+    rgba(251, 201, 92, 1) 30%,
+    rgba(251, 201, 92, 0) 70%
+  );
+  height: 100vw;
+  right: -40vw;
+  opacity: 0.9;
+}
+
+/* mountains */
+.hero-section__bg3 {
+  background: url(mountains.png);
+  background-size: contain;
+  top: unset;
+  bottom: -1px;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+@media all and (max-width: 1000px) {
+  .hero-section__bg3 {
+    background-size: 200%;
+    background-position-x: 70%;
+  }
+}
+@media all and (max-width: 600px) {
+  .hero-section__bg3 {
+    background-size: 300%;
+    background-position-x: 80%;
+  }
 }
 
 .hero-text {
@@ -222,7 +279,11 @@ nav {
 
 /*#region what*/
 .what-i-do-section {
+  background: linear-gradient(#071924 0%,#071924 20%, var(--body-color) 70%);
 }
+/* 
+.what-i-do-section__bg {
+} */
 
 .short-intro {
   max-width: 1000px;
@@ -237,13 +298,23 @@ nav {
   padding: 0;
   margin-top: 16rem;
   gap: 3rem;
+  align-items: flex-start;
 }
+@media all and (max-width: 800px) {
+  .what-i-do-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
+}
+
 .what-i-do-card {
   background-color: white;
   position: relative;
   padding: 3rem;
   flex-basis: 33.3333%;
   padding-top: 6rem;
+  max-width: 400px;
 }
 
 .what-i-do-card__img {
