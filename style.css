@@ -110,12 +110,15 @@ button {
   min-width: 200px;
   font-family: var(--body-font);
   font-size: inherit;
-  cursor: pointer;
   border: none;
   color: #000;
   background-color: var(--accent2);
   padding: 2rem 0;
   box-shadow: 2px 2px 2px 0px #00000059;
+}
+button,
+[role='button']:hover {
+  cursor: pointer;
 }
 button:hover {
   background-color: var(--accent3);
@@ -156,12 +159,19 @@ button:hover {
   transform: translateX(-50%);
 }
 
+.unstyled-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 /*#endregion layout helper*/
 
 /*#region nav*/
 nav {
   position: absolute;
   width: 100%;
+  z-index: 10;
 }
 .nav-container {
   display: flex;
@@ -178,8 +188,6 @@ nav {
 }
 
 .nav-list {
-  list-style: none;
-  padding: 0;
   font-size: var(--h4-size);
 }
 
@@ -252,12 +260,22 @@ nav {
     background-size: 300%;
     background-position-x: 80%;
   }
+
+  .hero-section__bg2 {
+    top: 30%;
+  }
 }
 
 .hero-text {
   margin-top: 5rem;
   display: flex;
 }
+@media all and (max-width: 600px) {
+  .hero-text {
+    flex-direction: column;
+  }
+}
+
 .hero-text__sub {
   max-width: max(80%, 300px);
 }
@@ -271,7 +289,15 @@ nav {
   border-radius: 50%;
   flex-shrink: 1;
   overflow: hidden;
+  height: 50%;
 }
+@media all and (max-width: 600px) {
+  .self-image-container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
 .self-image {
   height: 100%;
 }
@@ -279,11 +305,8 @@ nav {
 
 /*#region what*/
 .what-i-do-section {
-  background: linear-gradient(#071924 0%,#071924 20%, var(--body-color) 70%);
+  background: linear-gradient(#071924 0%, #071924 20%, var(--body-color) 70%);
 }
-/* 
-.what-i-do-section__bg {
-} */
 
 .short-intro {
   max-width: 1000px;
@@ -294,8 +317,6 @@ nav {
 
 .what-i-do-cards {
   display: flex;
-  list-style: none;
-  padding: 0;
   margin-top: 16rem;
   gap: 3rem;
   align-items: flex-start;
@@ -308,12 +329,13 @@ nav {
   }
 }
 
+/* could do a fancy clip path with this, but width responsiveness would be tricky */
 .what-i-do-card {
   background-color: white;
   position: relative;
   padding: 3rem;
   flex-basis: 33.3333%;
-  padding-top: 6rem;
+  padding-top: 7rem;
   max-width: 400px;
 }
 
@@ -323,8 +345,7 @@ nav {
   top: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 2rem solid var(--body-color);
-  background-color: var(--primary1);
+  background-color: var(--accent1);
   padding: 1rem;
 }
 /*#endregion what*/
@@ -332,6 +353,29 @@ nav {
 /*#region my work*/
 .my-work-section {
 }
+
+.my-work-list {
+  display: flex;
+  gap: 1rem;
+}
+.my-work-list__item {
+}
+.my-work-list__logo-img-container {
+  border: 4px solid white;
+  display: flex;
+  width: 150px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.my-work-list__logo-img-container:hover,
+.my-work-list__logo-img-container:focus {
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.5);
+  transform: translate(-3px, -3px);
+}
+
+.my-work__logo-img {
+  object-fit: cover;
+}
+
 /*#endregion my work*/
 
 /*#region contact*/
