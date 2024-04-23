@@ -33,6 +33,7 @@
 /* 2 - FORM WIDTH */
 .form-all {
   max-width: 600px;
+  width: 100%;
 }
 
 /* 5 - FONT SIZE */
@@ -93,6 +94,7 @@ ul.form-section {
 .form-textarea {
   border-color: #ffffff00;
   border-width: 2px;
+  width: 100%;
 }
 
 .form-textarea:hover,
