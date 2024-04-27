@@ -19,6 +19,8 @@
   --body-font: 'Montserrat', sans-serif;
   --heading-font: 'DM Serif Display', serif;
   --body-color: var(--primary2);
+  --shadow-light: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --shadow-medium: 6px 6px 6px 0 rgba(0, 0, 0, 0.5);
 }
 /*#region base*/
 * {
@@ -36,6 +38,7 @@ body {
   font-size: 1.8rem;
   margin: 0;
   font-family: var(--body-font);
+  /* background-color: #1e89af; */
   background-color: var(--body-color);
 }
 
@@ -114,7 +117,7 @@ button {
   color: #000;
   background-color: var(--accent2);
   padding: 2rem 0;
-  box-shadow: 2px 2px 2px 0px #00000059;
+  box-shadow: var(--shadow-light);
 }
 button,
 [role='button']:hover {
@@ -133,7 +136,7 @@ button:hover {
 }
 
 .section {
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 .section-heading {
   margin-left: auto;
@@ -146,6 +149,7 @@ button:hover {
   position: relative;
   margin: auto;
   display: inline-block;
+  margin-bottom: 1rem;
 }
 .section-heading-text::after {
   content: '';
@@ -289,7 +293,7 @@ nav {
 }
 
 .self-image-container {
-  border: 5px solid;
+  border: 10px solid;
   border-radius: 50%;
   flex-shrink: 1;
   overflow: hidden;
@@ -309,7 +313,7 @@ nav {
 
 /*#region what*/
 .what-i-do-section {
-  background: linear-gradient(#071924 0%, #071924 20%, var(--body-color) 70%);
+  /* background: linear-gradient(#071924 0%, #071924 20%, var(--body-color) 70%); */
 }
 
 .short-intro {
@@ -341,7 +345,7 @@ nav {
   flex-basis: 33.3333%;
   padding-top: 7rem;
   max-width: 400px;
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-light);
 }
 
 .what-i-do-card__img {
@@ -358,6 +362,7 @@ nav {
 
 /*#region my work*/
 .my-work-section {
+  /* background: linear-gradient(var(--body-color) 0%, var(--primary1) 100%); */
 }
 
 .my-work-list {
@@ -375,8 +380,8 @@ nav {
   left: 50%;
   bottom: -30px;
   transform: translateX(-50%);
-  border-left:   20px solid transparent;
-  border-right:  20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   border-bottom: 20px solid var(--accent1);
 }
 
@@ -384,13 +389,13 @@ nav {
   border: 4px solid white;
   display: flex;
   width: 150px;
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-light);
   height: 150px;
 }
 .my-work-list__logo-img-container:hover,
 .my-work-list__logo-img-container:focus,
 .selected > .my-work-list__logo-img-container {
-  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-medium);
   transform: translate(-3px, -3px);
 }
 .selected > .my-work-list__logo-img-container {
@@ -401,18 +406,44 @@ nav {
   object-fit: cover;
 }
 
-.my-work__infobox-container {margin-top: 30px;}
+.my-work__infobox-container {
+  margin-top: 30px;
+}
+
 .my-work__infobox {
   background-color: white;
   border: 10px solid var(--accent1);
   padding: 3rem;
+  display: none;
+  box-shadow: var(--shadow-light);
+  max-width: 830px;
+}
+
+.my-work__infobox.visible {
+  display: block;
+}
+.my-work__infobox__heading {
+  margin-bottom: 1rem;
+  line-height: 1em;
+}
+.my-work__infobox__dates {
+  color: #5c645c;
 }
 
 .my-work__screenshots {
   display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.my-work__screenshot-container {
+  flex-basis: 200px;
 }
 .my-work__screenshot {
   position: relative;
+}
+.my-work__screenshot-img {
+  max-height: 150px;
 }
 .my-work__screenshot-mag {
   position: absolute;
@@ -423,6 +454,7 @@ nav {
 
 /*#region contact*/
 .contact-section {
+  /* background: linear-gradient(var(--primary1) 0%, var(--primary2) 100%); */
 }
 
 .form-all {
@@ -482,3 +514,48 @@ footer {
   color: white;
 }
 /*#endregion footer*/
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c9;
+  z-index: 1000;
+  padding: 5rem;
+}
+.lightbox {
+  display: none;
+}
+.lightbox.visible {
+  display: block;
+}
+
+#lightbox__interior {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: fit-content;
+}
+
+#lightbox__interior__img-holder {
+  display: flex;
+}
+
+.lightbox__img {
+  max-height: 100vh;
+  margin: auto;
+}
+.lightbox__arrow {
+  position: absolute;
+  top: 50vh;
+  width: 11rem;
+  padding: 2rem;
+  z-index: 1;
+}
+#arrow-left {transform: translateX(-80%);}
+#arrow-right {
+  transform: translateX(80%);
+  right: 0;
+}

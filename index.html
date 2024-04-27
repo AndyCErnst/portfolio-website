@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
     rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <!-- jotform stuff -->
   <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?v=3.3.53284" type="text/javascript"></script>
   <script src="https://cdn02.jotfor.ms/static/jotform.forms.js?v=3.3.53284" type="text/javascript"></script>
@@ -163,40 +163,62 @@
         </h2>
 
         <ul class="my-work-list unstyled-list">
-          <li class="my-work-list__item">
+          <li class="my-work-list__item selected" id="axon">
             <div class="my-work-list__logo-img-container" role="button" tabindex="0">
-              <img class="my-work__logo-img" src="logos/axon logo.png" alt="" />
+              <img class="my-work__logo-img" src="logos/axon logo.png" alt="Axon" />
             </div>
           </li>
-          <li class="my-work-list__item">
+          <li class="my-work-list__item" id="expedia">
             <div class="my-work-list__logo-img-container" role="button" tabindex="0">
-              <img class="my-work__logo-img" src="logos/expedia logo.png" alt="" />
+              <img class="my-work__logo-img" src="logos/expedia logo.png" alt="Expedia" />
             </div>
           </li>
-          <li class="my-work-list__item selected">
+          <li class="my-work-list__item" id="fairslice">
             <div class="my-work-list__logo-img-container" role="button" tabindex="0">
-              <img class="my-work__logo-img" src="logos/fair slice logo.png" alt="" />
+              <img class="my-work__logo-img" src="logos/fair slice logo.png" alt="Fair Slice project" />
             </div>
           </li>
         </ul>
 
-        <article class="my-work__infobox-container">
-          <div class="my-work__infobox">
-            <h3 class="h2">Axon</h3>
-            <div class="h4">Team lead for core UI team on billion-dollar product(6 years)</div>
+        <article id="my-work__infobox-container" class="my-work__infobox-container">
+          <div class="my-work__infobox visible" id="axon__info">
+            <h3 class="h2 my-work__infobox__heading">Axon
+              <div class="my-work__infobox__dates h5">2016-2022</div>
+            </h3>
+            <div class="h5">Team lead for core UI team on Evidence.com, a $1+ billion product</div>
             <p>
               Text about what I did when I worked there. More text about good things I did and other stuff. This is just
               placeholder content but hopefully the actual content would be good and you would read it and go wow that
               is some impressive stuff you did there man. Very neat and I hope you work at my company too.
             </p>
-            <ul class="my-work__screenshots unstyled-list">
-              <li>
-                <div class="my-work__screenshot" role="button" tabindex="0">
-                  <img src="logos/axon logo.png" alt="Open Axon screenshot 1"/>
-                  <img class="my-work__screenshot-mag" src="icons/magnifier.svg" alt="" />
-                </div>
-              </li>
-            </ul>
+            <ul id="axon-list" class="my-work__screenshots unstyled-list"></ul>
+          </div>
+          <div class="my-work__infobox" id="expedia__info">
+            <h3 class="h2 my-work__infobox__heading">Expedia
+              <div class="my-work__infobox__dates h5">2015-2016</div>
+            </h3>
+            <div class="h4">Full-stack development on the Hotel Search page</div>
+            <p>
+              Text about what I did when I worked there. More text about good things I did and other stuff. This is just
+              placeholder content but hopefully the actual content would be good and you would read it and go wow that
+              is some impressive stuff you did there man. Very neat and I hope you work at my company too.
+            </p>
+            <ul id="expedia-list" class="my-work__screenshots unstyled-list"></ul>
+          </div>
+          <div class="my-work__infobox" id="fairslice__info">
+            <h3 class="h2 my-work__infobox__heading">Fair Slice (University of Edinburgh)
+              <div class="my-work__infobox__dates h5">2023</div>
+            </h3>
+            <div class="h4">Master of Science in Design Informatics thesis project</div>
+            <p>
+              Text about what I did when I worked there. More text about good things I did and other stuff. This is just
+              placeholder content but hopefully the actual content would be good and you would read it and go wow that
+              is some impressive stuff you did there man. Very neat and I hope you work at my company too.
+            </p>
+            <p><a href="https://fairslice.netlify.app/">
+                See the Fair Slice web app
+              </a></p>
+            <ul id="fairslice-list" class="my-work__screenshots unstyled-list"></ul>
           </div>
         </article>
 
@@ -280,12 +302,30 @@
       </div>
       <div class="footer-item-container">
         <div class="h3">AndyCErnst.com</div>
-        <div class="h5">Designed and developed by me </div>
+        <div class="h5">Designed and hand-coded 100% by me </div>
         <a class="h5" href="https://www.linkedin.com/in/andycernst/">linkedin.com/in/AndyCErnst</a>
         <div>2024© all rights reserved </div>
       </div>
     </div>
   </footer>
+  <div id="lightbox" class="lightbox">
+    <div id="lightbox__interior">
+      <div id="arrow-left" class="lightbox__arrow" role="button" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 -960 960 960">
+          <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z" />
+        </svg>
+      </div>
+
+      <div id="lightbox__interior__img-holder"></div>
+
+      <div id="arrow-right" class="lightbox__arrow" role="button" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 -960 960 960">
+          <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+        </svg>
+      </div>
+    </div>
+  </div>
   <script src="page-code.js"></script>
 </body>
+
 </html>
