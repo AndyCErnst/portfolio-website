@@ -35,8 +35,10 @@ workItems.forEach((el) => (el.onclick = addSelected))
 
 const projects = [
   { name: 'axon', images: 4 },
-  { name: 'expedia', images: 0 },
+  { name: 'expedia', images: 2 },
   { name: 'fairslice', images: 3 },
+  { name: 'gvh', images: 2 },
+  { name: 'uwkc', images: 3 },
 ]
 
 const getThumbHtml = (project, num) =>

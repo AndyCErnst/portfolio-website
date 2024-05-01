@@ -122,7 +122,8 @@ button,
 button:hover {
   background-color: var(--accent3);
 }
-a, a:visited {
+a,
+a:visited {
   color: #0091ff;
 }
 
@@ -168,8 +169,6 @@ a, a:visited {
   padding-left: 0;
   margin: 0;
 }
-
-
 
 /*#endregion layout helper*/
 
@@ -408,7 +407,10 @@ nav {
   border-color: var(--accent1);
 }
 
-.my-work__logo-img {object-fit: cover;background-color: white;}
+.my-work__logo-img {
+  object-fit: cover;
+  background-color: white;
+}
 
 .my-work__infobox-container {
   margin-top: 30px;
@@ -431,6 +433,20 @@ nav {
   color: #5c645c;
 }
 
+.tech-list-title {
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.tech-list {
+  list-style: none;
+  column-count: auto;
+  padding: 0;
+  margin-top: 0;
+  column-width: 13rem;
+}
+.tech-list > li {
+  margin-bottom: 1rem;
+}
 .my-work__screenshots {
   display: flex;
   gap: 1rem;
@@ -450,12 +466,12 @@ nav {
   position: absolute;
   top: 8px;
   right: 8px;
-  filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.9));
 }
 .my-work__screenshot-mag2 {
   top: 10px;
   right: 6px;
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
 /*#endregion my work*/
 
@@ -514,13 +530,13 @@ blockquote {
   flex-direction: column;
 }
 @media all and (max-width: 1000px) {
-  blockquote { 
+  blockquote {
     max-width: 800px;
   }
 }
 
 blockquote::before {
-  content: "“";
+  content: '“';
   position: absolute;
   left: -45px;
   top: -20px;
@@ -537,7 +553,7 @@ blockquote > footer {
 }
 
 blockquote > footer::before {
-  content: "—";
+  content: '—';
   left: -20px;
   top: 0;
   position: absolute;
@@ -595,7 +611,6 @@ blockquote > footer::before {
   display: none;
 }
 
-
 #lightbox__interior {
   margin-left: auto;
   margin-right: auto;
@@ -619,7 +634,9 @@ blockquote > footer::before {
   padding: 100% 2rem;
   z-index: 1;
 }
-#arrow-left {transform: translate(-80%, -50%);}
+#arrow-left {
+  transform: translate(-80%, -50%);
+}
 #arrow-right {
   transform: translate(80%, -50%);
   right: 0;
