@@ -34,6 +34,10 @@ html {
   font-style: normal;
 }
 
+:root:has(.no-document-scroll) {
+  overflow: hidden;
+}
+
 body {
   font-size: 1.7rem;
   margin: 0;
@@ -250,7 +254,7 @@ nav {
 
 /* mountains */
 .hero-section__bg3 {
-  background: url(mountains.png);
+  background: url(mountains-darker.png);
   background-size: contain;
   top: unset;
   bottom: -1px;
@@ -316,7 +320,7 @@ nav {
 
 /*#region what*/
 .what-i-do-section {
-  background: linear-gradient(#071924 0%, #071924 20%, var(--body-color) 80%);
+  background: linear-gradient(#061f24 0%, #01322a 20%, var(--body-color) 80%);
 }
 
 .short-intro {
@@ -329,8 +333,20 @@ nav {
 .what-i-do-cards {
   display: flex;
   margin-top: 16rem;
-  gap: 3rem;
+  row-gap: 7rem;
+  column-gap: 2rem;
   align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 2rem;
+  justify-content: center;
+}
+@media all and (max-width: 1000px) {
+  .what-i-do-cards {
+    flex-wrap: wrap;
+  }
 }
 @media all and (max-width: 800px) {
   .what-i-do-cards {
@@ -346,6 +362,7 @@ nav {
   position: relative;
   padding: 2rem;
   flex-basis: 33.3333%;
+  flex-grow: 1;
   padding-top: 7rem;
   max-width: 400px;
   box-shadow: var(--shadow-light);
@@ -363,6 +380,18 @@ nav {
 }
 /*#endregion what*/
 
+.section-break {
+  margin-top: 12rem;
+  background-color: #28404b;
+  text-align: center;
+  background-color: hsl(120 19% 13% / 1);
+  border-top: 3rem solid var(--primary3);
+  border-bottom: 3rem solid var(--primary3);
+  /* background-color: var(--gray700); */
+}
+
+.section-break-logo {padding: 7rem 2rem;height: 50%;width: 30rem;}
+
 /*#region my work*/
 .my-work-section {
   /* background: linear-gradient(var(--body-color) 0%, var(--primary1) 100%); */
@@ -372,6 +401,7 @@ nav {
   display: flex;
   gap: 1rem;
   align-items: stretch;
+  justify-content: center;
 }
 .my-work-list__item {
   position: relative;
@@ -414,6 +444,8 @@ nav {
 
 .my-work__infobox-container {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .my-work__infobox {
@@ -625,7 +657,6 @@ blockquote > footer::before {
 .lightbox__img {
   max-height: 100vh;
   margin: auto;
-  max-width: 1000px;
 }
 .lightbox__arrow {
   position: absolute;
@@ -634,6 +665,15 @@ blockquote > footer::before {
   padding: 100% 2rem;
   z-index: 1;
 }
+.lightbox__x {
+  position: absolute;
+  padding: 2rem;
+  top: 0;
+  width: 11rem;
+  fill: white;
+  right: 0;
+}
+
 #arrow-left {
   transform: translate(-80%, -50%);
 }

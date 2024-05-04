@@ -12,12 +12,6 @@ body.addEventListener('keypress', function (e) {
 const workItems = document.querySelectorAll('.my-work-list__item')
 const infoBox = document.getElementById('my-work__infobox-container')
 
-// body.onclick = (e) => {
-//   if (!e.defaultPrevented) {
-//     removeSelected()
-//   }
-// }
-
 const removeSelected = () => {
   document.querySelectorAll('.selected').forEach((el) => el.classList.remove('selected'))
   document.querySelectorAll('.visible').forEach((el) => el.classList.remove('visible'))
@@ -64,10 +58,15 @@ projects.forEach((p) => {
   }
   list.innerHTML = items
 })
+
+
+/**
+ * Lightbox code
+ */
 const lightbox = document.getElementById('lightbox')
 lightbox.onclick = (e) => {
-  if (e.target === lightbox) {
-    lightbox.classList.remove('visible')
+  if (e.currentTarget === lightbox) {
+    lightbox.classList.remove('visible', 'no-document-scroll')
   }
 }
 
@@ -76,7 +75,7 @@ var currentProject = ''
 const workItemScreenshots = document.querySelectorAll('.my-work__screenshot')
 workItemScreenshots.forEach((el) => {
   el.onclick = (e) => {
-    lightbox.classList.add('visible')
+    lightbox.classList.add('visible', 'no-document-scroll')
     currentPicture = e.currentTarget.dataset.num
     currentProject = e.currentTarget.dataset.project
     setLightboxImage(currentProject, currentPicture)
@@ -94,13 +93,15 @@ const setLightboxImage = (project, num) => {
 
 const leftArrow = document.getElementById('arrow-left')
 const rightArrow = document.getElementById('arrow-right')
-leftArrow.onclick = () => {
+leftArrow.onclick = (e) => {
   const p = projects.find((proj) => proj.name === currentProject)
   currentPicture = currentPicture - 1 <= 0 ? p.images : currentPicture - 1
   setLightboxImage(currentProject, currentPicture)
+  e.stopPropagation()
 }
-rightArrow.onclick = () => {
+rightArrow.onclick = (e) => {
   const p = projects.find((proj) => proj.name === currentProject)
   currentPicture = currentPicture + 1 > p.images ? 1 : currentPicture + 1
   setLightboxImage(currentProject, currentPicture)
+  e.stopPropagation()
 }

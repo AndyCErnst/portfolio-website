@@ -95,14 +95,14 @@
     </section>
 
     <section class="what-i-do-section section">
-      <div class="body-width">
+      <div>
         <h2 id="what-i-do" class="section-heading">
           <div class="section-heading-text">What I do</div>
         </h2>
         <div class="short-intro h4">
-          For over a decade, I’ve helped organizations from small non-profits to industry-leading billion-dollar
-          enterprises create great web experiences.
-          I love collaborating across disciplines to build something wonderful.
+          For over a decade, I’ve helped create great web experiences for everyone from small non-profits organizations
+          to industry-leading billion-dollar enterprises.<br /><br />
+          I love working together to build something beautiful.
         </div>
         <ul class="what-i-do-cards unstyled-list">
           <li class="what-i-do-card">
@@ -114,12 +114,10 @@
             </div>
             <h3>Development</h3>
             <p>
-              Text about my work as a developer goes here. Text about my work as a developer goes here. Text about my
-              work as a developer goes here.
-              This is a list Item
-              This is another
-              This is another
-              This is another
+              With over a decade of web development experience, I've led diverse projects ranging from small non-profit
+              marketing websites to spearheading the development of core UI infrastructure for a billion-dollar product.
+              I prioritize writing clean, elegant code to ensure maintainability and scalability across all projects.
+              Proficient in React, JavaScript/Typescript, HTML, and CSS, I bring a depth of expertise to every project.
             </p>
           </li>
           <li class="what-i-do-card">
@@ -131,10 +129,10 @@
             </div>
             <h3>Design</h3>
             <p>
-              Text about my work as a developer goes here. Text about my work as a developer goes here. Text about my
-              work as a developer goes here.
-              This is a list Item
-              This is another
+              As a frontend engineer, I’ve collaborated closely with design teams. I further honed this
+              interdisciplinary approach through a master’s degree in design informatics From cultivating user empathy
+              to iterating designs based on testing and implementing them in code, I integrate design and development to
+              craft exceptional customer experiences. I use Photoshop, Illustrator, Figma, and Sketch.
             </p>
           </li>
           <li class="what-i-do-card">
@@ -145,15 +143,19 @@
               </svg></div>
             <h3>Teaching</h3>
             <p>
-              Text about my work as a developer goes here. Text about my work as a developer goes here. Text about my
-              work as a developer goes here.
-              This is a list Item
-              This is another
+              I have a background in teaching technology to a wide range of students, from 5-year-olds to 75-year-olds.
+              My instruction covers a spectrum of subjects, including computer fundamentals, programming, Photoshop, as
+              well as specialized topics like React and web accessibility. I believe in fostering a sense of playfulness
+              in the classroom, fostering curiosity and learning through hands-on engagement and exploration.
             </p>
           </li>
         </ul>
       </div>
     </section>
+
+    <div class="section-break">
+      <img class="section-break-logo" src="plain-logo.svg" alt="" />
+    </div>
 
     <section class="my-work-section section">
       <div class="body-width">
@@ -216,6 +218,7 @@
             <ul class="tech-list">
               <li>Typescript</li>
               <li>React</li>
+              <li>Redux</li>
               <li>Scala</li>
               <li>CSS</li>
               <li>HTML</li>
@@ -257,7 +260,7 @@
             </p>
 
             <p><a href="https://fairslice.netlify.app/">
-              fairslice.netlify.app
+                fairslice.netlify.app
               </a></p>
             <h4 class="tech-list-title">Tech Used</h4>
             <ul class="tech-list">
@@ -281,7 +284,7 @@
               were key challenges I tackled alongside the UWKC team. The proud relaunch in 2015 marked a significant
               milestone, enhancing UWKC's online presence and community impact
             <p><a href="https://www.uwkc.org/">
-              uwkc.org
+                uwkc.org
               </a></p>
             <h4 class="tech-list-title">Tech Used</h4>
             <ul class="tech-list">
@@ -409,8 +412,6 @@
       </div>
 
     </section>
-
-
   </main>
   <footer class="footer">
     <div class="footer-container">
@@ -428,7 +429,7 @@
   <div id="lightbox" class="lightbox">
     <div id="lightbox__interior">
       <div id="arrow-left" class="lightbox__arrow" role="button" tabindex="0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 -960 960 960">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 -960 960 960" title="previous screenshot">
           <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z" />
         </svg>
       </div>
@@ -436,10 +437,16 @@
       <div id="lightbox__interior__img-holder"></div>
 
       <div id="arrow-right" class="lightbox__arrow" role="button" tabindex="0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 -960 960 960">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 -960 960 960" title="next screenshot">
           <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
         </svg>
       </div>
+
+    </div>
+    <div id="lightbox-x" class="lightbox__x" role="button" tabindex="0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" title="close screenshot views">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      </svg>
     </div>
   </div>
   <script src="page-code.js"></script>
