@@ -397,6 +397,36 @@
                     class="form-textarea validate[required]" name="q6_message" style="height:163px"
                     data-component="textarea" required="" aria-labelledby="label_6"></textarea> </div>
               </li>
+              <li class="form-line jf-required" data-type="control_captcha" id="id_11"><label
+                  class="form-label form-label-top form-label-auto" id="label_11" for="input_11" aria-hidden="false">
+                  Please verify that you are human<span class="form-required">*</span> </label>
+                <div id="cid_11" class="form-input-wide jf-required" data-layout="full">
+                  <section data-wrapper-react="true">
+                    <div id="hcaptcha_input_11" class="h-captcha" data-siteKey="772f4a50-7161-425e-8cd5-4d7e361ab765"
+                      data-callback="hcaptchaCallbackinput_11" data-expired-callback="hcaptchaExpiredCallbackinput_11">
+                    </div><input type="hidden" id="input_11" class="hidden validate[required]" name="hcaptcha_visible"
+                      required="" />
+                    <script type="text/javascript" src="https://hcaptcha.com/1/api.js"></script>
+                    <script type="text/javascript">
+                      var hcaptchaCallbackinput_11 = function (token) {
+                        var hiddenInput = $("input_11");
+                        hiddenInput.setValue(1);
+                        if (hiddenInput.validateInput) {
+                          hiddenInput.validateInput();
+                        }
+                      }
+
+                      var hcaptchaExpiredCallbackinput_11 = function () {
+                        var hiddenInput = $("input_11");
+                        hiddenInput.writeAttribute("value", false);
+                        if (hiddenInput.validateInput) {
+                          hiddenInput.validateInput();
+                        }
+                      }
+                    </script>
+                  </section>
+                </div>
+              </li>
               <li data-type="control_button" id="id_7">
                 <div id="cid_7" class="form-input-wide" data-layout="full">
                   <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
@@ -404,35 +434,6 @@
                       class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
                       data-component="button" data-content="">Submit</button>
                   </div>
-                </div>
-              </li>
-              <li class="form-line jf-required" data-type="control_captcha" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" for="input_11" aria-hidden="false"> Please verify that you are human<span class="form-required">*</span> </label>
-                <div id="cid_11" class="form-input-wide jf-required" data-layout="full">
-                  <section data-wrapper-react="true">
-                    <div id="hcaptcha_input_11" class="h-captcha" data-siteKey="772f4a50-7161-425e-8cd5-4d7e361ab765" data-callback="hcaptchaCallbackinput_11" data-expired-callback="hcaptchaExpiredCallbackinput_11"></div><input type="hidden" id="input_11" class="hidden validate[required]" name="hcaptcha_visible" required="" />
-                    <script type="text/javascript" src="https://hcaptcha.com/1/api.js"></script>
-                    <script type="text/javascript">
-                      var hcaptchaCallbackinput_11 = function(token)
-                      {
-                        var hiddenInput = $("input_11");
-                        hiddenInput.setValue(1);
-                        if (hiddenInput.validateInput)
-                        {
-                          hiddenInput.validateInput();
-                        }
-                      }
-        
-                      var hcaptchaExpiredCallbackinput_11 = function()
-                      {
-                        var hiddenInput = $("input_11");
-                        hiddenInput.writeAttribute("value", false);
-                        if (hiddenInput.validateInput)
-                        {
-                          hiddenInput.validateInput();
-                        }
-                      }
-                    </script>
-                  </section>
                 </div>
               </li>
               <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
