@@ -426,6 +426,7 @@ nav {
   height: 150px;
   background-color: white;
   justify-content: center;
+  border: none;
 }
 .my-work-list__logo-img-container:hover,
 .my-work-list__logo-img-container:focus,
@@ -595,7 +596,7 @@ blockquote > footer::before {
 /*#region footer*/
 .footer {
   background-color: var(--gray900);
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
 }
 
 .footer-container {
