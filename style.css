@@ -42,12 +42,12 @@ body {
   font-size: 1.7rem;
   margin: 0;
   font-family: var(--body-font);
-  /* background-color: #1e89af; */
   background-color: var(--body-color);
 }
 
 main {
   width: 100%;
+  position: relative;
 }
 img {
   max-width: 100%;
@@ -176,6 +176,28 @@ a:visited {
 
 /*#endregion layout helper*/
 
+/* .section {
+  background-image: url(./noise4.png);
+  background-repeat: repeat;
+  background-size: 331px 180px;
+} */
+
+/* #noise-overlay {
+  height: 100%;
+  width: 100%;
+  background-image: url(./noise2.png);
+  background-repeat: repeat;
+  background-blend-mode: color-burn;
+  position: absolute;
+  opacity: 0.1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-size: 330px 180px;
+} */
+
 /*#region nav*/
 nav {
   position: absolute;
@@ -191,7 +213,7 @@ nav {
 
 .nav-list {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -228,7 +250,7 @@ nav {
 }
 /* base color */
 .hero-section__bg0 {
-  background: rgb(29, 137, 174);
+  background-color: rgb(29, 137, 174);
 }
 /* horizon sunrise fade */
 .hero-section__bg1 {
@@ -387,7 +409,6 @@ nav {
   background-color: hsl(120 19% 13% / 1);
   border-top: 3rem solid var(--primary3);
   border-bottom: 3rem solid var(--primary3);
-  /* background-color: var(--gray700); */
 }
 
 .section-break-logo {padding: 7rem 2rem;height: 50%;width: 30rem;}
@@ -395,6 +416,7 @@ nav {
 /*#region my work*/
 .my-work-section {
   /* background: linear-gradient(var(--body-color) 0%, var(--primary1) 100%); */
+  padding-bottom: 14rem;
 }
 
 .my-work-list {
@@ -533,7 +555,6 @@ nav {
 .testimonial-section {
   background-color: var(--gray700);
   padding-bottom: 14rem;
-  margin-top: 14rem;
 }
 
 .testimonial-container {

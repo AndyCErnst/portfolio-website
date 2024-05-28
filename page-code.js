@@ -59,7 +59,6 @@ projects.forEach((p) => {
   list.innerHTML = items
 })
 
-
 /**
  * Lightbox code
  */
@@ -105,3 +104,17 @@ rightArrow.onclick = (e) => {
   setLightboxImage(currentProject, currentPicture)
   e.stopPropagation()
 }
+
+// Scrolling code
+const navItems = document.querySelectorAll('nav a')
+navItems.forEach((el) => {
+  el.onclick = (e) => {
+    e.preventDefault()
+    const target = el.attributes.href.value.slice(1)
+    console.log(document.getElementById(target))
+    window.scrollTo({
+      top: document.getElementById(target).offsetTop,
+      behavior: 'smooth',
+    })
+  }
+})
