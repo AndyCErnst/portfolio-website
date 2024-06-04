@@ -15,7 +15,7 @@
   --accent2: #f0c425;
   --accent3: #d1a700;
   --gray700: #343734;
-  --gray900: #171916;
+  --gray900: #1f201e;
   --body-font: 'Montserrat', sans-serif;
   --heading-font: 'DM Serif Display', serif;
   --body-color: var(--primary2);
@@ -25,6 +25,7 @@
 /*#region base*/
 * {
   box-sizing: border-box !important;
+  line-height: 1.5;
 }
 
 html {
@@ -354,7 +355,7 @@ nav {
 
 .what-i-do-cards {
   display: flex;
-  margin-top: 16rem;
+  margin-top: 25rem;
   row-gap: 7rem;
   column-gap: 2rem;
   align-items: stretch;
@@ -374,7 +375,7 @@ nav {
   .what-i-do-cards {
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    gap: 16rem;
   }
 }
 
@@ -385,20 +386,31 @@ nav {
   padding: 2rem;
   flex-basis: 33.3333%;
   flex-grow: 1;
-  padding-top: 7rem;
+  padding-top: 0rem;
   max-width: 400px;
   box-shadow: var(--shadow-light);
+}
+.what-i-do-card:before {
+  content: '';
+  background-image: url(halfcircle.svg);
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  top: 0px;
+  background-repeat: no-repeat;
+  left: 0;
+  transform: translateY(-100%);
+  background-position-x: center;
+  background-size: cover;
 }
 
 .what-i-do-card__img {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -118%);
   border-radius: 50%;
-  background-color: var(--accent1);
-  padding: 1rem;
-  box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.45);
+  fill: var(--accent1);
 }
 /*#endregion what*/
 
