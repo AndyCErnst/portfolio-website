@@ -37,7 +37,7 @@ html {
 
 @media all and (max-width: 800px) {
   html {
-    font-size: 50%;
+    font-size: 56.25%;
   }
 }
 
@@ -383,17 +383,18 @@ nav {
 }
 
 .short-intro {
-  max-width: 1000px;
+  width: 1000px;
+  max-width: 90%;
   margin: auto;
   background-color: white;
-  padding: 6rem 9rem;
+  padding: 6rem 7rem;
   position: relative;
   z-index: 1;
 }
 
 .what-i-do-cards {
   display: flex;
-  row-gap: 7rem;
+  row-gap: 14rem;
   column-gap: 2rem;
   align-items: stretch;
   margin-left: auto;
@@ -404,7 +405,7 @@ nav {
   justify-content: center;
   margin-top: 5rem;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1200px) {
   .what-i-do-cards {
     flex-wrap: wrap;
   }
@@ -421,13 +422,14 @@ nav {
 .what-i-do-card {
   background-color: white;
   position: relative;
-  padding: 2rem;
+  padding: 3rem;
+  padding-top: 0rem;
   flex-basis: 33.3333%;
   flex-grow: 1;
-  padding-top: 0rem;
-  max-width: 400px;
+  max-width: 500px;
   box-shadow: var(--shadow-light);
 }
+
 .what-i-do-card:before {
   content: '';
   background-image: url(halfcircle.svg);
