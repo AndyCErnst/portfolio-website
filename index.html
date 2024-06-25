@@ -8,9 +8,7 @@
   <title>Andy Ernst - UX Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..600;1,400..600&family=Permanent+Marker&display=swap" rel="stylesheet">
   <!-- jotform stuff -->
   <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?v=3.3.53284" type="text/javascript"></script>
   <script src="https://cdn02.jotfor.ms/static/jotform.forms.js?v=3.3.53284" type="text/javascript"></script>
@@ -88,7 +86,7 @@
       <div class="hero-section__bg2 hero__bg"></div>
       <div class="hero-section__bg3 hero__bg"></div>
       <div class="hero-text body-width">
-        <h1 id="home">Hi, I’m Andy <div class="h3 hero-text__sub">I’m a web developer with a foot in design and
+        <h1 id="home">Hi, I’m Andy <div class="h3 hero-text__sub">I’m a web developer working in design and
             education</div>
         </h1>
         <div class="self-image-container">
@@ -97,17 +95,20 @@
         </div>
       </div>
     </section>
-
+    <section class="what-i-do-section-intro section">
+      <h2 id="what-i-do" class="section-heading">
+        <div class="section-heading-text">What I do</div>
+      </h2>
+      <div class="short-intro h4">
+        For over a decade, I’ve created great web experiences for everyone from small non-profits to industry-leading
+        billion-dollar enterprises.<br /><br />
+        Let's build something beautiful together.
+      </div>
+      <img src="forest.png" id="forest-image" />
+    </section>
     <section class="what-i-do-section section">
       <div>
-        <h2 id="what-i-do" class="section-heading">
-          <div class="section-heading-text">What I do</div>
-        </h2>
-        <div class="short-intro h4">
-          For over a decade, I’ve created great web experiences for everyone from small non-profits to industry-leading
-          billion-dollar enterprises.<br /><br />
-          Let's build something beautiful together.
-        </div>
+
         <ul class="what-i-do-cards unstyled-list">
           <li class="what-i-do-card">
             <div class="what-i-do-card__img">
@@ -120,10 +121,13 @@
             <p>
               With <strong>over a decade</strong> of web development experience, I've led diverse projects ranging from
               small non-profit
-              marketing websites to spearheading the development of core UI infrastructure for a
+              marketing websites to heading the core UI team for a
               <strong>billion-dollar</strong> software product.
-              I prioritize writing clean, elegant code to ensure maintainability and scalability across all projects.
             </p>
+            <p>
+              I write clean, elegant code to ensure maintainability and scalability across all projects.
+            </p>
+            I know:
             <ul>
               <li>React</li>
               <li>JavaScript/Typescript</li>
@@ -141,15 +145,16 @@
             </div>
             <h3>Design</h3>
             <p>
-              As a full-stack engineer, I’ve <strong>collaborated</strong> closely with design teams. I further honed
-              this
-              interdisciplinary approach through a <strong>master’s degree in Design Informatics</strong>. From
-              cultivating user empathy
-              to iterating designs based on testing and implementing them in code, I integrate design and development to
+              I've always collaborated closely with design teams, which sparked my interest in pursuing a <strong>Master's Degree in Design Informatics</strong> from the University of Edinburgh. Since then, I've completed both the design and development of three websites and a game.
+            </p>
+            <p>From cultivating user empathy to rapid design prototyping,
+              <strong>I integrate design and development</strong> to
               craft exceptional customer experiences.
             </p>
+            I'm proficient with:
             <ul>
               <li>Figma</li>
+              <li>Sketch</li>
               <li>Photoshop</li>
               <li>Illustrator</li>
             </ul>
@@ -163,10 +168,18 @@
             <h3>Teaching</h3>
             <p>
               I've taught technology to students from <strong>5 to 75 years old</strong>.
-              My instruction covers a spectrum of subjects, including computer fundamentals, programming, Photoshop, as
-              well as specialized topics like React and web accessibility. I foster a sense of <strong>playfulness
-              in the classroom</strong>, fostering curiosity and learning through hands-on engagement and exploration.
             </p>
+            <p>I foster a sense of <strong>playfulness
+                in the classroom</strong>, inspiring curiosity and learning through hands-on engagement and exploration.
+            </p>
+            I've taught:
+            <ul>
+              <li>English as a foreign language</li>
+              <li>Photoshop</li>
+              <li>Video game programming</li>
+              <li>Web development</li>
+              <li>Web accessibility</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -222,7 +235,7 @@
             <h3 class="h2 my-work__infobox__heading">Axon
               <div class="my-work__infobox__dates h5">2016-2022</div>
             </h3>
-            <div class="h4">Full-stack developer and Lead Developer for core UI team on a $1+ billion product,
+            <div class="h5">Full-stack developer and Lead Developer for core UI team on a $1+ billion product,
               Evidence.com</div>
             <p>
               During my six-year tenure at Axon as a senior developer, I led initiatives pivotal to the
@@ -250,7 +263,7 @@
             <h3 class="h2 my-work__infobox__heading">Expedia
               <div class="my-work__infobox__dates h5">2015-2016</div>
             </h3>
-            <div class="h4">Full-stack developer on the Hotel Search page</div>
+            <div class="h5">Full-stack developer on the Hotel Search page</div>
             <p>
               During my time at Expedia, I collaborated in a diverse, 15-person team on improving the hotel search
               results page, implemented a ide variety of A/B tests, and balance engineering risks with business
@@ -271,7 +284,7 @@
             <h3 class="h2 my-work__infobox__heading">Fair Slice
               <div class="my-work__infobox__dates h5">2023</div>
             </h3>
-            <div class="h4">Master of Science in Design Informatics thesis project (University of Edinburgh)</div>
+            <div class="h5">Master of Science in Design Informatics thesis project (University of Edinburgh)</div>
             <p>
               A web tool and learning resource about the logic of provably fair resource division. I did all background
               research, user interviews and tests, design, and development for this project. This was the focus of my
@@ -296,7 +309,7 @@
             <h3 class="h2 my-work__infobox__heading">United Way of King County
               <div class="my-work__infobox__dates h5">2015</div>
             </h3>
-            <div class="h4">Lead developer for the new United Way of King County website</div>
+            <div class="h5">Lead developer for the new United Way of King County website</div>
             <p>
               As lead developer for United Way of King County (UWKC), a prominent non-profit managing over $75 million
               annually, I led the
@@ -319,7 +332,7 @@
             <h3 class="h2 my-work__infobox__heading">Guatemala Village Health
               <div class="my-work__infobox__dates h5">2019</div>
             </h3>
-            <div class="h4">Developer and Co-Designer for the Guatemala Village Health non-profit</div>
+            <div class="h5">Developer and Co-Designer for the Guatemala Village Health non-profit</div>
             <p>
               I took on a leadership role as a volunteer the Guatemala Village Health (GVH) organization in
               migrating their website from Wordpress to Wix. Working closely with GVH members and a fellow designer, I

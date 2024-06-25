@@ -111,7 +111,6 @@ navItems.forEach((el) => {
   el.onclick = (e) => {
     e.preventDefault()
     const target = el.attributes.href.value.slice(1)
-    console.log(document.getElementById(target))
     window.scrollTo({
       top: document.getElementById(target).offsetTop,
       behavior: 'smooth',
