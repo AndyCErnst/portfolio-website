@@ -16,6 +16,7 @@
   --accent3: #d1a700;
   --gray700: #343734;
   --gray900: #1f201e;
+  --border-radius: 2.5px;
   --body-font: 'Montserrat', sans-serif;
   --heading-font: "Permanent Marker", cursive;
   --body-color: var(--primary2);
@@ -186,7 +187,7 @@ a:visited {
   height: 5px;
   width: 110%;
   background-color: var(--accent1);
-  border-radius: 2.5px;
+  border-radius: var(--border-radius);
   bottom: -3px;
   left: 50%;
   transform: translateX(-50%);
@@ -420,6 +421,7 @@ nav {
 
 /* could do a fancy clip path with this, but width responsiveness would be tricky */
 .what-i-do-card {
+  border-radius: var(--border-radius);
   background-color: white;
   position: relative;
   padding: 3rem;
@@ -485,6 +487,7 @@ nav {
 }
 .my-work-list__item {
   position: relative;
+  border-radius: var(--border-radius);
 }
 .my-work-list__item.selected:after {
   content: '';
@@ -507,6 +510,8 @@ nav {
   background-color: white;
   justify-content: center;
   border: none;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 .my-work-list__logo-img-container:hover,
 .my-work-list__logo-img-container:focus,
@@ -530,6 +535,7 @@ nav {
 }
 
 .my-work__infobox {
+  border-radius: var(--border-radius);
   background-color: white;
   border: 10px solid var(--accent1);
   padding: 5rem;
@@ -557,9 +563,10 @@ nav {
   display: block;
 }
 .tech-list > li {
-  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
   border: 2px solid var(--accent1);
   padding: 1rem;
+  margin-bottom: 1rem;
   display: inline-block;
 }
 .my-work__screenshots {
@@ -574,6 +581,7 @@ nav {
   position: relative;
 }
 .my-work__screenshot-img {
+  border-radius: var(--border-radius);
   max-height: 150px;
   border: 2px solid #c3c3c3;
 }
@@ -599,6 +607,7 @@ nav {
 .form-all {
   background-color: var(--gray700);
   font-size: inherit;
+  border-radius: var(--border-radius);
 }
 .form-label {
   color: white;

@@ -109,7 +109,7 @@ ul.form-section {
 
 /* Heights */
 .form-label {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   margin-right: 0;
   display: block;
 }
@@ -303,6 +303,9 @@ div.form-header-group.hasImage {
 .submit-button {
   background-color: var(--accent2);
   padding: 2rem 0;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .submit-button:hover {
   background-color: var(--accent3);
