@@ -59,7 +59,7 @@
 
 </head>
 
-<body>
+<body tabindex="0">
   <header>
     <nav>
       <div class="nav-container body-width">
@@ -209,7 +209,7 @@
             </div>
           </h3>
           <ul class="my-work-list unstyled-list">
-            <li class="my-work-list__item selected" id="axon">
+            <li class="my-work-list__item" id="axon">
               <div class="my-work-list__item__header">
                 <div class="my-work-list__logo-img-container" role="button" tabindex="0">
                   <img class="my-work__logo-img" src="logos/axon logo.png" alt="Axon" />
@@ -222,14 +222,15 @@
                 <div class="h5">Full-stack developer and Lead Developer for core UI team on a $1+ billion product,
                   Evidence.com</div>
                 <p>
-                  During my six-year tenure at Axon as a senior developer, I led initiatives pivotal to the
-                  company's success. I spearheaded the complete rebuild of the Axon.com,
-                  and led the core UI team for Axon's primary software product, Evidence.com. As a passionate advocate
-                  for
-                  web
-                  accessibility, I led the charge on rebuilding our components to be WCAG compliant. I conducted
+                  During my six-year tenure at Axon as a senior developer, I completely rebuilt Axon.com, led the core
+                  UI team for Axon's primary software product, Evidence.com, and I led the charge on rebuilding our
+                  components to be WCAG 2.2 compliant. I conducted
                   143 code interviews, contributing to fairer hiring practices through the creation of real-world based
-                  interview questions, and mentored several other engineers.
+                  interview questions, and mentored 5 other engineers.
+                </p>
+
+                <p class="my-work__links">
+                  <button onclick="showScreenshots('axon')">See Axon screenshots</button>
                 </p>
 
                 <ul class="tech-list">
@@ -242,7 +243,6 @@
                   <li>C#</li>
                   <li>SQL</li>
                 </ul>
-                <ul id="axon-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
             <li class="my-work-list__item" id="expedia">
@@ -257,13 +257,16 @@
               <div>
                 <div class="h5">Full-stack developer on the Hotel Search page</div>
                 <p>
-                  During my time at Expedia, I collaborated in a diverse, 15-person team on improving the hotel search
-                  results page, implemented a ide variety of A/B tests, and balance engineering risks with business
-                  priorities. To improve development speed, I independently wrote a Chrome extension allowing engineers
+                  I improved the hotel search results page through deep code refactoring,
+                  implementing dozens of A/B tests, and a proof of concept migration to React. To improve development
+                  speed, I independently wrote a Chrome
+                  extension allowing engineers
                   to
                   quickly search through API responses to locate required data.
                 </p>
-
+                <p class="my-work__links">
+                  <button onclick="showScreenshots('expedia')">See Expedia screenshots</button>
+                </p>
                 <ul class="tech-list">
                   <li>JavaScript</li>
                   <li>Java</li>
@@ -271,7 +274,6 @@
                   <li>Marionette.js</li>
                   <li>CSS</li>
                 </ul>
-                <ul id="expedia-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
           </ul>
@@ -298,18 +300,15 @@
               <div>
                 <div class="h5">Master's Thesis project (University of Edinburgh)</div>
                 <p>
-                  A web tool and learning resource about the logic of provably fair resource division. I did all
-                  background
-                  research, user interviews and tests, design, and development for this project. This was the focus of
-                  my
-                  Masters of Science thesis/dissertation, which won the Joint Design Informatics MSc Oberlander
-                  Dissertation
-                  Prize.
+                  A web tool and learning resource about provably fair resource division algorithms. I completed
+                  literature research, user interviews and tests, design, and development for this project. This thesis
+                  won the Joint Design Informatics MSc Oberlander Dissertation Prize.
                 </p>
 
-                <p><a href="https://fairslice.netlify.app/">
+                <p class="my-work__links"><a href="https://fairslice.netlify.app/">
                     fairslice.netlify.app
-                  </a></p>
+                  </a><button onclick="showScreenshots('fairslice')">See Fair Slice screenshots</button>
+                </p>
 
                 <ul class="tech-list">
                   <li>Typescript</li>
@@ -318,7 +317,6 @@
                   <li>HTML</li>
                   <li>CSS</li>
                 </ul>
-                <ul id="fairslice-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
             <li class="my-work-list__item" id="uwkc">
@@ -333,15 +331,15 @@
               <div>
                 <div class="h5">Lead developer of the United Way of King County website</div>
                 <p>
-                  As lead developer for United Way of King County (UWKC), a prominent non-profit managing over $75
-                  million annually, I led the
-                  redesign of their website to achieve a clean, modern look. Simplifying navigation and content
-                  organization
-                  were key challenges I tackled alongside the UWKC team. The proud relaunch in 2015 marked a significant
-                  milestone, enhancing UWKC's online presence and community impact
-                <p><a href="https://www.uwkc.org/">
+                  United Way of King County (UWKC) is a prominent non-profit managing over $75
+                  million annually. I led the complete rebuild of their website to achieve a clean, modern look. The
+                  proud relaunch in 2015 increased UWKC's online presence and community impact.
+                <p class="my-work__links">
+                  <a href="https://www.uwkc.org/">
                     uwkc.org
-                  </a></p>
+                  </a>
+                  <button onclick="showScreenshots('uwkc')">See UWCK screenshots</button>
+                </p>
 
                 <ul class="tech-list">
                   <li>JavaScript</li>
@@ -349,7 +347,6 @@
                   <li>HTML</li>
                   <li>Wordpress</li>
                 </ul>
-                <ul id="uwkc-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
             <li class="my-work-list__item" id="gvh">
@@ -362,24 +359,20 @@
                 </h3>
               </div>
               <div>
-                <div class="h5">Developer and Co-Designer for the Guatemala Village Health non-profit</div>
+                <div class="h5">Volunteer Developer and Designer</div>
                 <p>
-                  I took on a leadership role as a volunteer the Guatemala Village Health (GVH) organization in
-                  migrating their website from Wordpress to Wix. Working closely with GVH members and a fellow designer,
-                  I
-                  successfully built the new website on the Wix
-                  platform and conducted training sessions for GVH members, empowering them to independently manage and
-                  customize their online presence. It's gratifying to witness GVH
-                  members confidently adding their own content and designs, effectively leveraging the new platform to
-                  amplify their impact and reach.
+                  Guatemala Village Health (GVH) works to improve people's health rural Guatemala. I volunteered to
+                  rebuilt their Wordpress in Wix.
+                  In two months I launched the new site and trained GVH members to manage their online presence.
                 </p>
-
+                <p class="my-work__links">
+                  <button onclick="showScreenshots('gvh')">See GVH screenshots</button>
+                </p>
                 <ul class="tech-list">
                   <li>CSS</li>
                   <li>HTML</li>
                   <li>Wix</li>
                 </ul>
-                <ul id="gvh-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
             <!-- <li class="my-work-list__item" id="janmauhill">
@@ -408,7 +401,8 @@
                 </h3>
               </div>
               <div>
-                <div class="h5">A clone of Wordle, including animations.</div>
+                <div class="h5">Wordle</div>
+                <p>A clone of Wordle</p>
                 <p><a href="https://q5wyfd.csb.app/">
                     Play Wordle
                   </a></p>
@@ -417,7 +411,6 @@
                   <li>Typescript</li>
                   <li>CSS</li>
                 </ul>
-                <ul id="wordle-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
             <li class="my-work-list__item" id="snek">
@@ -430,7 +423,10 @@
                 </h3>
               </div>
               <div>
-                <div class="h5">A clone of Snake built in under an hour</div>
+                <div class="h5">Snake</div>
+                <p>
+                  A clone of the classic Snake game built under an hour as a challenge.
+                </p>
                 <p><a href="https://r6rv63.csb.app/">
                     Play Snek
                   </a></p>
@@ -438,7 +434,6 @@
                   <li>React</li>
                   <li>CSS</li>
                 </ul>
-                <ul id="snek-list" class="my-work__screenshots unstyled-list"></ul>
               </div>
             </li>
           </ul>
