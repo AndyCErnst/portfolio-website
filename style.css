@@ -203,9 +203,16 @@ a:visited {
   margin: 0;
 }
 
-/*#endregion layout helper*/
+.rip {
+  mask: url(thin_rip.png);
+  mask-size: 100%;
+  mask-repeat: repeat-x;
+  mask-position: 50% 0;
+}
 
-/* .section {
+/*#endregion layout helper*/
+/* 
+.section {
   background-image: url(./noise4.png);
   background-repeat: repeat;
   background-size: 331px 180px;
@@ -352,11 +359,13 @@ nav {
 }
 
 .self-image-container {
-  border: 10px solid;
   border-radius: 50%;
   flex-shrink: 1;
   overflow: hidden;
   height: 50%;
+  border: 10px solid black;
+  /* box-shadow: 0px 0px 30px 4px #eed17c;
+  background: rgb(239 217 142 / 60%); */
 }
 @media all and (max-width: 600px) {
   .self-image-container {
@@ -481,13 +490,15 @@ nav {
 }
 
 /*#region my work*/
+#my-work {
+  margin-bottom: 0;
+}
+
 .my-work-section {
   overflow-x: clip;
 }
 
-.my-work-subsection {
-  margin-bottom: 10rem;
-}
+.my-work-subsection {padding: 6rem 0;}
 
 .my-work-subsection .section-heading {
   position: relative;
@@ -553,7 +564,6 @@ nav {
 .my-work-subsection:nth-of-type(2) {
   background-color: var(--gray700);
   color: white;
-  padding: 5rem 0;
 }
 .my-work-subsection:nth-of-type(2) .section-heading {
 }
@@ -600,6 +610,7 @@ nav {
   margin-top: 0.5rem;
   line-height: 1em;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .my-work__infobox__dates {
