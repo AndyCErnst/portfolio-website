@@ -360,7 +360,7 @@ nav {
 }
 
 .self-image {
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   bottom: -10px;
 }
