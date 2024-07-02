@@ -423,6 +423,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 20rem;
+    margin-top: 12rem;
   }
 }
 
@@ -491,6 +492,7 @@ nav {
 /*#region my work*/
 .fern {
   width: 100%;
+  min-width: 700px;
   padding-bottom: 22%;
   mask-image: url(ferns.png);
   background-color: var(--primary2);
@@ -517,16 +519,16 @@ nav {
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
-  max-width: 900px;
+  /* max-width: 900px; */
 }
 .my-work-list__item {
   position: relative;
   border-radius: var(--border-radius);
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
 }
 .my-work-list__item__header {
-  width: 20rem;
+  width: 18rem;
 }
 .my-work-list__item:after {
   content: '';
@@ -591,8 +593,8 @@ nav {
 @media all and (max-width: 600px) {
   .my-work-list__item {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
+    align-items: center;
+    gap: 3rem;
   }
 }
 
