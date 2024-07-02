@@ -8,6 +8,7 @@
   --primary1: #9add9c;
   --primary2: #64a365;
   --primary3: #446d45;
+  --darker-green: hsl(101 51% 22% / 1);
   --secondary1: #9bd8f2;
   --secondary2: #34bae4;
   --secondary3: #1e87b4;
@@ -203,7 +204,7 @@ a:visited {
   margin: 0;
 }
 
-.rip {
+.sil {
   mask: url(thin_rip.png);
   mask-size: 100%;
   mask-repeat: repeat-x;
@@ -211,27 +212,11 @@ a:visited {
 }
 
 /*#endregion layout helper*/
-/* 
-.section {
+
+/* .section {
   background-image: url(./noise4.png);
   background-repeat: repeat;
   background-size: 331px 180px;
-} */
-
-/* #noise-overlay {
-  height: 100%;
-  width: 100%;
-  background-image: url(./noise2.png);
-  background-repeat: repeat;
-  background-blend-mode: color-burn;
-  position: absolute;
-  opacity: 0.1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000;
-  background-size: 330px 180px;
 } */
 
 /*#region nav*/
@@ -387,14 +372,23 @@ nav {
   bottom: -10px;
   margin-top: -20rem;
 }
+.forest {
+  margin-top: -20rem;
+  width: 100%;
+  padding-bottom: 30%; /* based on forest image aspect ratio */
+  mask-image: url(forest.png);
+  background-color: var(--darker-green);
+}
 .what-i-do-section-intro {
   background-color: #061f24;
   margin-bottom: 0rem;
 }
 .what-i-do-section {
   /* background: linear-gradient(#061f24 0%, #01322a 20%, var(--body-color) 80%); */
-  background-color: var(--body-color);
+  background-color: var(--darker-green);
+  /* padding-bottom: 12rem; */
 }
+
 
 .short-intro {
   width: 1000px;
@@ -409,13 +403,13 @@ nav {
 .what-i-do-cards {
   display: flex;
   row-gap: 14rem;
-  column-gap: 2rem;
+  column-gap: 5rem;
   align-items: stretch;
   margin-left: auto;
   margin-right: auto;
   width: 1400px;
   max-width: 100%;
-  padding: 0 2rem;
+  padding: 0 3rem;
   justify-content: center;
   margin-top: 5rem;
 }
@@ -434,19 +428,25 @@ nav {
 
 /* could do a fancy clip path with this, but width responsiveness would be tricky */
 .what-i-do-card {
-  border-radius: var(--border-radius);
-  background-color: white;
+  background-color: #ffffff;
   position: relative;
-  padding: 3rem;
+  padding: 2rem;
   padding-top: 0rem;
   flex-basis: 33.3333%;
   flex-grow: 1;
   max-width: 500px;
-  box-shadow: var(--shadow-light);
+  border-image: url('paper border.png') 70 / 15px / 14px round stretch;
+  box-shadow: 16px 16px 7px 9px #0000004a;
 }
+.what-i-do-card:nth-child(2) {
+    border-image-repeat: repeat;
+    border-image-slice: 49;
+}
+.what-i-do-card:nth-child(3) {border-image-slice: 65;border-image-repeat: stretch round;}
+
 
 .what-i-do-card:before {
-  content: '';
+  /* content: ''; */
   background-image: url(halfcircle.svg);
   position: absolute;
   width: 100%;
@@ -476,7 +476,6 @@ nav {
 /*#endregion what*/
 
 .section-break {
-  margin-top: 12rem;
   text-align: center;
   background-color: var(--dark-green);
   border-top: 3rem solid var(--primary3);
@@ -490,6 +489,13 @@ nav {
 }
 
 /*#region my work*/
+.fern {
+  width: 100%;
+  padding-bottom: 22%;
+  mask-image: url(ferns.png);
+  background-color: var(--primary2);
+}
+
 #my-work {
   margin-bottom: 0;
 }
