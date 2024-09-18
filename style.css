@@ -18,6 +18,7 @@
   --gray700: #343734;
   --gray900: #1f201e;
   --dark-green: rgb(27, 39, 27);
+  --brown: #2a200d;
   --border-radius: 2.5px;
   --body-font: 'Montserrat', sans-serif;
   --heading-font: "Permanent Marker", cursive;
@@ -209,6 +210,7 @@ a:visited {
   mask-size: 100%;
   mask-repeat: repeat-x;
   mask-position: 50% 0;
+  width: 100%;
 }
 
 /*#endregion layout helper*/
@@ -491,7 +493,6 @@ nav {
 
 /*#region my work*/
 .fern {
-  width: 100%;
   min-width: 700px;
   padding-bottom: 22%;
   mask-image: url(ferns.png);
@@ -653,8 +654,9 @@ nav {
 
 /*#region contact*/
 .contact-section {
-  /* background: linear-gradient(var(--primary1) 0%, var(--primary2) 100%); */
+  padding-top: 12rem;
   padding-bottom: 10rem;
+  position: relative;
 }
 
 .form-all {
@@ -674,9 +676,22 @@ nav {
 /*#endregion contact*/
 
 /*#region testimonial*/
+.rocks {
+  min-width: 700px;
+  padding-bottom: 7%;
+  background-color: var(--gray700);
+  margin-left: -1px;
+}
+.rocks-inverted {
+  transform: rotate(180deg);
+  transform: scaleY(-1);
+  position: absolute;
+  top: -1px;
+}
+
 .testimonial-section {
   background-color: var(--gray700);
-  padding-bottom: 14rem;
+  padding-bottom: 10rem;
 }
 
 .testimonial-container {

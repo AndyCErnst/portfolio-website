@@ -58,6 +58,7 @@ const setLightboxImage = (project, num) => {
 const projects = [
   { name: 'axon', images: 4 },
   { name: 'expedia', images: 2 },
+  { name: 'belle maison', images: 4 },
   { name: 'fairslice', images: 3 },
   { name: 'gvh', images: 2 },
   { name: 'uwkc', images: 3 },
